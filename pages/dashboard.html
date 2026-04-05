@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Mycelium &amp; Co.</title>
+  <meta name="description" content="Manage your mushroom deliveries, track grow kits, and access growing guides.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
+</head>
+<body style="display:flex;min-height:100vh;background:var(--bg-subtle);">
+<!-- Sidebar -->
+  <aside class="dash-sidebar">
+    <a href="../index.html" class="dash-logo">
+      <div class="logo-icon" style="width:32px;height:32px;font-size:16px">🍄</div>
+      Mycelium & Co.
+    </a>
+    <nav class="dash-nav">
+      <div class="dash-nav-section">Main</div>
+      <div class="dash-nav-link active" onclick="switchDash('overview', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Overview
+      </div>
+      <div class="dash-nav-link" onclick="switchDash('deliveries', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="18" r="1"/><circle cx="20" cy="18" r="1"/></svg>
+        My Deliveries
+        <span class="dash-nav-badge">1</span>
+      </div>
+      <div class="dash-nav-link" onclick="switchDash('varieties', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        Variety Preferences
+      </div>
+      <div class="dash-nav-section">Learn</div>
+      <div class="dash-nav-link" onclick="switchDash('guides', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Growing Guides
+      </div>
+      <div class="dash-nav-link" onclick="switchDash('tutorials', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        Video Tutorials
+        <span class="dash-nav-badge">3</span>
+      </div>
+      <div class="dash-nav-section">Account</div>
+      <div class="dash-nav-link" onclick="switchDash('notifications', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notifications
+        <span class="dash-nav-badge">4</span>
+      </div>
+      <div class="dash-nav-link" onclick="switchDash('settings', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </div>
+    </nav>
+    <div class="dash-bottom">
+      <div class="dash-user">
+        <div class="dash-user-avatar"><img src="../assets/images/avatar-grower.png" alt="Jane Doe"></div>
+        <div>
+          <div class="dash-user-name">Jane Doe</div>
+          <div class="dash-user-plan">Grower Plan</div>
+        </div>
+      </div>
+      <div class="dash-nav-link" onclick="handleLogout(event)" style="color:var(--danger);margin-top:4px;cursor:pointer;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Log Out
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dash-main">
+    <!-- Top Bar -->
+    <div class="dash-topbar">
+      <div class="dash-topbar-right" style="margin-left: auto;">
+        <button class="icon-btn" onclick="toggleTheme()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn" style="position:relative" onclick="switchDash('notifications', document.querySelector('[onclick*=notifications]'))">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span style="position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--danger);border:2px solid var(--bg-card)"></span>
+        </button>
+        <div style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;border-radius:var(--radius-sm);border:1px solid var(--border-light)">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--bg-subtle);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="../assets/images/avatar-grower.png" alt="Jane" style="width:100%;height:100%;object-fit:cover;"></div>
+          <span style="font-family:var(--font-ui);font-size:13px;font-weight:500;color:var(--text)">Jane Doe</span>
+        </div>
+        <button class="icon-btn mobile-menu-btn dash-mobile-btn" onclick="toggleDashSidebar()" aria-label="Toggle Dashboard Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="dash-content">
+
+      <!-- ---- OVERVIEW ---- -->
+      <div class="dash-section active" id="dash-overview">
+        <div class="dash-welcome">
+          <div class="dash-welcome-greeting">Good morning</div>
+          <div class="dash-welcome-name">Welcome back, Jane! 🌿</div>
+          <div class="dash-welcome-sub">Your next delivery arrives Tuesday, April 8th. You're growing beautifully.</div>
+        </div>
+        <div class="dash-metrics">
+          <div class="metric-card">
+            <div class="metric-label">Total Deliveries</div>
+            <div class="metric-val">24</div>
+            <div class="metric-change metric-up">↑ 4 this month</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Active Grow Kits</div>
+            <div class="metric-val">3</div>
+            <div class="metric-change metric-up">↑ 1 new flush</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Varieties Tried</div>
+            <div class="metric-val">12</div>
+            <div class="metric-change" style="color:var(--text-muted)">Out of 32 available</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Guides Completed</div>
+            <div class="metric-val">7</div>
+            <div class="metric-change metric-up">↑ 2 this week</div>
+          </div>
+        </div>
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <span class="dash-card-title">Upcoming Deliveries</span>
+              <span class="dash-card-action" onclick="switchDash('deliveries', document.querySelectorAll('.dash-nav-link')[1])">View all →</span>
+            </div>
+            <div class="delivery-timeline">
+              <div class="delivery-item">
+                <div class="delivery-dot-wrap">
+                  <div class="delivery-dot-main filled"></div>
+                  <div class="delivery-line"></div>
+                </div>
+                <div style="flex:1">
+                  <div class="delivery-date">Mar 25, 2026</div>
+                  <div class="delivery-name">Grower Box #23</div>
+                  <div class="delivery-detail">Lion's Mane + Blue Oyster + Shiitake</div>
+                </div>
+                <span class="delivery-status status-delivered">Delivered</span>
+              </div>
+              <div class="delivery-item">
+                <div class="delivery-dot-wrap">
+                  <div class="delivery-dot-main filled"></div>
+                  <div class="delivery-line"></div>
+                </div>
+                <div style="flex:1">
+                  <div class="delivery-date">Apr 1, 2026</div>
+                  <div class="delivery-name">Grower Box #24</div>
+                  <div class="delivery-detail">Pink Oyster + Reishi + King Oyster</div>
+                </div>
+                <span class="delivery-status status-preparing">Preparing</span>
+              </div>
+              <div class="delivery-item">
+                <div class="delivery-dot-wrap">
+                  <div class="delivery-dot-main gray"></div>
+                </div>
+                <div style="flex:1">
+                  <div class="delivery-date">Apr 8, 2026</div>
+                  <div class="delivery-name">Grower Box #25</div>
+                  <div class="delivery-detail">Your preferences applied</div>
+                </div>
+                <span class="delivery-status status-upcoming">Upcoming</span>
+              </div>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <span class="dash-card-title">Growing Progress</span>
+              <span class="dash-card-action">Manage →</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🦁 Lion's Mane Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:12px;color:var(--primary)">Flush 2 • Day 5</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🌸 Pink Oyster Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:12px;color:var(--warning)">Flush 1 • Day 9</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:90%;background:var(--gold)"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🔴 Reishi Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:12px;color:var(--text-light)">Colonising • Day 14</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🍂 Shiitake Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:12px;color:var(--success)">Ready to harvest!</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:100%;background:var(--success)"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <span class="dash-card-title">Recently Unlocked Guides</span>
+            <span class="dash-card-action" onclick="switchDash('guides', document.querySelectorAll('.dash-nav-link')[3])">View all →</span>
+          </div>
+          <div class="guides-grid">
+            <div class="guide-card">
+              <div class="guide-thumb"><div class="guide-play">▶</div>🌱</div>
+              <div class="guide-body"><div class="guide-tag">Beginner</div><div class="guide-title">First Flush: What to Expect</div><div class="guide-meta">8 min read</div></div>
+            </div>
+            <div class="guide-card">
+              <div class="guide-thumb guide-thumb-2"><div class="guide-play">▶</div>💧</div>
+              <div class="guide-body"><div class="guide-tag">Care</div><div class="guide-title">Humidity & Moisture Management</div><div class="guide-meta">12 min read</div></div>
+            </div>
+            <div class="guide-card">
+              <div class="guide-thumb guide-thumb-3"><div class="guide-play">▶</div>🔬</div>
+              <div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Identifying Contamination Early</div><div class="guide-meta">15 min read</div></div>
+            </div>
+            <div class="guide-card">
+              <div class="guide-thumb guide-thumb-4"><div class="guide-play">▶</div>🍳</div>
+              <div class="guide-body"><div class="guide-tag">Cooking</div><div class="guide-title">The Perfect Mushroom Sauté</div><div class="guide-meta">6 min read</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- DELIVERIES ---- -->
+      <div class="dash-section" id="dash-deliveries">
+        <h2 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:6px;color:var(--text)">My Deliveries</h2>
+        <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Manage your weekly mushroom boxes, skip weeks, and view past orders.</p>
+        <div style="display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap">
+          <button class="filter-btn active">All Deliveries</button>
+          <button class="filter-btn">Upcoming</button>
+          <button class="filter-btn">Delivered</button>
+          <button class="filter-btn">Skipped</button>
+        </div>
+        <div class="dash-card" style="margin-bottom:16px">
+          <div class="dash-card-header">
+            <span class="dash-card-title">📦 Box #25 — Apr 8, 2026</span>
+            <span class="delivery-status status-upcoming" style="margin-left:0">Upcoming</span>
+          </div>
+          <p style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted);margin-bottom:16px">Estimated delivery: Tuesday, April 8th. You can modify until Sunday, April 6th.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-primary btn-sm">Manage Box Contents</button>
+            <button class="btn btn-secondary btn-sm">Skip This Week</button>
+            <button class="btn btn-secondary-brown btn-sm">Change Delivery Date</button>
+          </div>
+        </div>
+        <div class="dash-card" style="margin-bottom:16px">
+          <div class="dash-card-header">
+            <span class="dash-card-title">📦 Box #24 — Apr 1, 2026</span>
+            <span class="delivery-status status-preparing" style="margin-left:0">Preparing</span>
+          </div>
+          <p style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Pink Oyster · Reishi · King Oyster · Grow Kit enclosed</p>
+        </div>
+        <div class="dash-card" style="margin-bottom:16px;opacity:0.7">
+          <div class="dash-card-header">
+            <span class="dash-card-title">📦 Box #23 — Mar 25, 2026</span>
+            <span class="delivery-status status-delivered" style="margin-left:0">Delivered</span>
+          </div>
+          <p style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Lion's Mane · Blue Oyster · Shiitake · Recipe Card Vol. 12</p>
+        </div>
+      </div>
+
+      <!-- ---- VARIETIES ---- -->
+      <div class="dash-section" id="dash-varieties">
+        <h2 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:6px;color:var(--text)">Variety Preferences</h2>
+        <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Select the mushrooms you want in your weekly boxes. We'll curate your deliveries accordingly.</p>
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <span class="dash-card-title">Your Selections (5 of 8 available)</span>
+            <button class="btn btn-primary btn-sm">Save Preferences</button>
+          </div>
+          <div class="variety-prefs">
+            <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🦁</span>
+              <span class="variety-pref-name">Lion's Mane</span>
+              <div class="variety-pref-check">✓</div>
+            </div>
+            <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🌸</span>
+              <span class="variety-pref-name">Pink Oyster</span>
+              <div class="variety-pref-check">✓</div>
+            </div>
+            <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🍂</span>
+              <span class="variety-pref-name">Shiitake</span>
+              <div class="variety-pref-check">✓</div>
+            </div>
+            <div class="variety-pref-item" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🔴</span>
+              <span class="variety-pref-name">Reishi</span>
+              <div class="variety-pref-check"></div>
+            </div>
+            <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🟡</span>
+              <span class="variety-pref-name">Chanterelle</span>
+              <div class="variety-pref-check">✓</div>
+            </div>
+            <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🍄</span>
+              <span class="variety-pref-name">King Oyster</span>
+              <div class="variety-pref-check">✓</div>
+            </div>
+            <div class="variety-pref-item" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🌿</span>
+              <span class="variety-pref-name">Maitake</span>
+              <div class="variety-pref-check"></div>
+            </div>
+            <div class="variety-pref-item" onclick="this.classList.toggle('selected')">
+              <span class="variety-pref-emoji">🌾</span>
+              <span class="variety-pref-name">Enoki</span>
+              <div class="variety-pref-check"></div>
+            </div>
+          </div>
+          <p style="font-family:var(--font-ui);font-size:12px;color:var(--text-light);margin-top:16px">Preferences apply to deliveries 2+ weeks ahead. Tap varieties to toggle selection.</p>
+        </div>
+      </div>
+
+      <!-- ---- GUIDES ---- -->
+      <div class="dash-section" id="dash-guides">
+        <h2 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:6px;color:var(--text)">Growing Guides</h2>
+        <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Expert guides curated for your growing journey.</p>
+        <div style="display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Beginner</button>
+          <button class="filter-btn">Intermediate</button>
+          <button class="filter-btn">Advanced</button>
+          <button class="filter-btn">Cooking</button>
+        </div>
+        <div class="guides-grid">
+          <div class="guide-card"><div class="guide-thumb"><div class="guide-play">▶</div>🌱</div><div class="guide-body"><div class="guide-tag">Beginner</div><div class="guide-title">First Flush: What to Expect</div><div class="guide-meta">8 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb guide-thumb-2"><div class="guide-play">▶</div>💧</div><div class="guide-body"><div class="guide-tag">Care</div><div class="guide-title">Humidity & Moisture Management</div><div class="guide-meta">12 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb guide-thumb-3"><div class="guide-play">▶</div>🔬</div><div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Identifying Contamination Early</div><div class="guide-meta">15 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb guide-thumb-4"><div class="guide-play">▶</div>🍳</div><div class="guide-body"><div class="guide-tag">Cooking</div><div class="guide-title">The Perfect Mushroom Sauté</div><div class="guide-meta">6 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#705040,#403020)"><div class="guide-play">▶</div>🫙</div><div class="guide-body"><div class="guide-tag">Intermediate</div><div class="guide-title">Making Your First Grain Spawn</div><div class="guide-meta">22 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#405050,#202830)"><div class="guide-play">▶</div>🧬</div><div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Agar Work for Isolation</div><div class="guide-meta">30 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#506040,#283220)"><div class="guide-play">▶</div>🌲</div><div class="guide-body"><div class="guide-tag">Foraging</div><div class="guide-title">Wild Foraging Safety Basics</div><div class="guide-meta">18 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#705030,#402010)"><div class="guide-play">▶</div>💊</div><div class="guide-body"><div class="guide-tag">Medicinal</div><div class="guide-title">Functional Mushrooms: A Guide</div><div class="guide-meta">25 min read</div></div></div>
+        </div>
+      </div>
+
+      <!-- ---- TUTORIALS ---- -->
+      <div class="dash-section" id="dash-tutorials">
+        <h2 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:6px;color:var(--text)">Video Tutorials</h2>
+        <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Step-by-step video walkthroughs from our master mycologists.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+          <div class="guide-card" style="border-radius:var(--radius)">
+            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#3A6B40,#2C5230)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div>🌱</div>
+            <div class="guide-body"><div class="guide-tag">Series 1 · Ep. 1</div><div class="guide-title">Complete Beginner's Cultivation Course — Introduction</div><div class="guide-meta">28 min · HD</div></div>
+          </div>
+          <div class="guide-card" style="border-radius:var(--radius)">
+            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#9B5C28,#7A4520)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div>⚗️</div>
+            <div class="guide-body"><div class="guide-tag">Series 1 · Ep. 2</div><div class="guide-title">Sterilisation Techniques: Pressure Cooker Guide</div><div class="guide-meta">45 min · HD</div></div>
+          </div>
+          <div class="guide-card" style="border-radius:var(--radius)">
+            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#404030,#202018)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div>🧫</div>
+            <div class="guide-body"><div class="guide-tag">Series 2 · Ep. 1</div><div class="guide-title">Agar Masterclass: From Plates to Cultures</div><div class="guide-meta">52 min · HD</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- NOTIFICATIONS ---- -->
+      <div class="dash-section" id="dash-notifications">
+        <h2 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:6px;color:var(--text)">Notifications</h2>
+        <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Stay updated on your deliveries, grow progress, and new content.</p>
+        <div class="notif-list">
+          <div class="notif-item unread">
+            <div class="notif-icon">📦</div>
+            <div style="flex:1">
+              <div class="notif-title">Box #24 is being prepared</div>
+              <div class="notif-sub">Pink Oyster, Reishi & King Oyster are being packed for your Apr 1 delivery.</div>
+            </div>
+            <div class="notif-time">2h ago</div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-icon">🍄</div>
+            <div style="flex:1">
+              <div class="notif-title">Your Shiitake kit is ready to harvest!</div>
+              <div class="notif-sub">The fruiting bodies have reached optimal size. Harvest now for best flavour.</div>
+            </div>
+            <div class="notif-time">5h ago</div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-icon">📚</div>
+            <div style="flex:1">
+              <div class="notif-title">New guide: Agar Work for Isolation</div>
+              <div class="notif-sub">A new advanced growing guide has been added to your library.</div>
+            </div>
+            <div class="notif-time">1d ago</div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-icon">🎉</div>
+            <div style="flex:1">
+              <div class="notif-title">You've completed 7 growing guides!</div>
+              <div class="notif-sub">Fantastic progress. You've unlocked the Intermediate Grower badge.</div>
+            </div>
+            <div class="notif-time">2d ago</div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-icon">🚚</div>
+            <div style="flex:1">
+              <div class="notif-title">Box #23 delivered successfully</div>
+              <div class="notif-sub">Your delivery was confirmed on Mar 25. Enjoy your Lion's Mane!</div>
+            </div>
+            <div class="notif-time">Mar 25</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- SETTINGS ---- -->
+      <div class="dash-section" id="dash-settings">
+        <h2 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:6px;color:var(--text)">Settings</h2>
+        <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Manage your account, subscription, and delivery preferences.</p>
+        <div class="settings-sections">
+          <div class="settings-section-card">
+            <div class="settings-section-title">Profile Information</div>
+            <div class="settings-section-sub">Update your personal details.</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+              <div class="form-group" style="margin:0"><label class="form-label">First Name</label><input class="form-input" value="Jane"></div>
+              <div class="form-group" style="margin:0"><label class="form-label">Last Name</label><input class="form-input" value="Doe"></div>
+            </div>
+            <div class="form-group" style="margin-bottom:16px"><label class="form-label">Email</label><input class="form-input" value="jane@example.com" type="email"></div>
+            <button class="btn btn-primary btn-sm">Save Changes</button>
+          </div>
+          <div class="settings-section-card">
+            <div class="settings-section-title">Notification Preferences</div>
+            <div class="settings-section-sub">Choose how you'd like to be notified.</div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">Delivery Updates</div><div class="settings-row-sub">Status changes for your boxes</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">Harvest Reminders</div><div class="settings-row-sub">When your kits are ready</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">New Content Alerts</div><div class="settings-row-sub">Guides and tutorials</div></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">Weekly Newsletter</div><div class="settings-row-sub">Tips, recipes, mycology news</div></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+            </div>
+          </div>
+          <div class="settings-section-card">
+            <div class="settings-section-title">Subscription</div>
+            <div class="settings-section-sub">Manage your Grower Plan subscription.</div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">Current Plan</div><div class="settings-row-sub">Grower Plan · $44/week</div></div>
+              <button class="btn btn-secondary btn-sm" onclick="window.location.href='pricing.html'">Upgrade</button>
+            </div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">Next Billing Date</div><div class="settings-row-sub">April 8, 2026</div></div>
+              <button class="btn btn-secondary btn-sm">Manage Billing</button>
+            </div>
+            <div class="settings-row">
+              <div><div class="settings-row-label">Pause Subscription</div><div class="settings-row-sub">Pause for up to 4 weeks</div></div>
+              <button class="btn btn-secondary-brown btn-sm">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end dash-content -->
+  </main>
+</div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

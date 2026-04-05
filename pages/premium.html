@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium — Master Mycology Experience | Mycelium &amp; Co.</title>
+  <meta name="description" content="Access rare cultures, expert consultations, and the premium Master Grower plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
+</head>
+<body>
+  <header class="header" id="mainHeader">
+  <div class="header-inner">
+    <a href="../index.html" class="logo">
+      <div class="logo-icon">🍄</div>
+      <span>Mycelium<em style="font-style:italic;color:var(--primary)"> &amp; Co.</em></span>
+    </a>
+    <div class="nav-wrapper" id="navWrapper">
+      <nav class="nav">
+        <div class="nav-dropdown">
+          <a class="nav-link" href="../index.html" style="display:flex;align-items:center;gap:4px">
+            Home
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-link">Home 1 (Classic)</a>
+            <a href="index-2.html" class="dropdown-link">Home 2 (Shop)</a>
+          </div>
+        </div>
+        <a class="nav-link" href="premium.html">Premium</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">
+          <svg id="themeIconDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="themeIconLight" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 10H3M21 6H3M21 14H3M17 18H3"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Start Growing</a>
+      </div>
+    </div>
+    <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+</header>
+<section class="hero2">
+    <div class="hero2-grain"></div>
+    <div class="hero2-accent"></div>
+    <div class="hero2-content">
+      <div>
+        <div class="hero2-eyebrow fade-up">
+          <div class="hero2-line"></div>
+          <span class="hero2-eyebrow-text">Premium Cultivation Experience</span>
+        </div>
+        <h1 class="hero2-title fade-up fade-up-1">The Art of<br><span class="accent">Mycology,</span><br>Mastered.</h1>
+        <p class="hero2-sub fade-up fade-up-2">Our Master Grower plan gives you access to rare specimen cultures, one-on-one expert consultations, and a curated harvest box featuring varieties you won't find anywhere else.</p>
+        <div class="hero2-ctas fade-up fade-up-3">
+          <button class="btn btn-primary btn-lg" onclick="window.location.href='pricing.html'">Explore Master Plan</button>
+          <button class="btn btn-outline-white btn-lg" onclick="window.location.href='signup.html'">Start Free Trial</button>
+        </div>
+        <div class="hero2-stats-row fade-up fade-up-4">
+          <div class="hero2-stat">
+            <div class="hero2-stat-val">32+</div>
+            <div class="hero2-stat-label">Rare Species</div>
+          </div>
+          <div class="hero2-stat">
+            <div class="hero2-stat-val">98%</div>
+            <div class="hero2-stat-label">Satisfaction</div>
+          </div>
+          <div class="hero2-stat">
+            <div class="hero2-stat-val">1:1</div>
+            <div class="hero2-stat-label">Expert Support</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero2-right fade-up fade-up-2">
+        <div style="width:100%;height:100%;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.1);">
+          <img src="../assets/images/hero-lab.png" alt="Premium Mycology Lab" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item"><span>Lion's Mane</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Shiitake</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Reishi</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Pink Oyster</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Chanterelle</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Turkey Tail</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Maitake</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Enoki</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Porcini</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Morel</span><span class="marquee-dot"></span></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item"><span>Lion's Mane</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Shiitake</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Reishi</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Pink Oyster</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Chanterelle</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Turkey Tail</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Maitake</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Enoki</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Porcini</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span>Morel</span><span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">Premium Features</span>
+        <h2 class="section-title">Everything in One <em>Ecosystem</em></h2>
+        <p class="section-sub">The Master plan isn't just a subscription — it's a complete mycology partnership.</p>
+      </div>
+      <div class="premium-grid">
+        <div class="premium-cell">
+          <div class="premium-icon">🧬</div>
+          <div class="premium-title">Rare Cultures Access</div>
+          <div class="premium-desc">Monthly access to limited-run specimen cultures not available in our public shop. From ghost fungus to blue chanterelle.</div>
+        </div>
+        <div class="premium-cell featured">
+          <div class="premium-icon">📦</div>
+          <div class="premium-title">Curated Harvest Box</div>
+          <div class="premium-desc">Each week brings a personally curated selection of the freshest, rarest varieties from our farm — plus chef recipe cards.</div>
+        </div>
+        <div class="premium-cell">
+          <div class="premium-icon">🎓</div>
+          <div class="premium-title">Master Class Access</div>
+          <div class="premium-desc">Unlimited access to our full library of advanced cultivation masterclasses, live Q&A sessions and workshops.</div>
+        </div>
+        <div class="premium-cell">
+          <div class="premium-icon">💬</div>
+          <div class="premium-title">Expert Consultations</div>
+          <div class="premium-desc">Monthly 1:1 video call with our head mycologist. Get personalized advice on your grow setup, contamination issues, and more.</div>
+        </div>
+        <div class="premium-cell">
+          <div class="premium-icon">🔬</div>
+          <div class="premium-title">Lab-Grade Supplies</div>
+          <div class="premium-desc">Priority access to professional agar kits, pressure cookers, flow hoods and lab equipment at exclusive member pricing.</div>
+        </div>
+        <div class="premium-cell">
+          <div class="premium-icon">🌐</div>
+          <div class="premium-title">Community Network</div>
+          <div class="premium-desc">Connect with 1,200+ serious cultivators worldwide. Trade cultures, share techniques, and collaborate on projects.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section how-bg">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">Trusted by <em>Professionals</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The rare culture access alone justifies the Master plan. I've been able to cultivate species I thought were only accessible in academic labs."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><img src="../assets/images/avatar-scientist.png" alt="Dr. Lena K."></div>
+            <div>
+              <div class="testi-name">Dr. Lena K.</div>
+              <div class="testi-role">Mycologist · Academic Researcher</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The monthly consultation completely transformed my sterile technique. My contamination rate went from 40% to under 5%. Extraordinary value."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><img src="../assets/images/avatar-grower.png" alt="Felix R."></div>
+            <div>
+              <div class="testi-name">Felix R.</div>
+              <div class="testi-role">Urban Farmer · Master Plan</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We supply 12 local restaurants with exotic mushrooms using cultures from Mycelium & Co. The consistency and quality are unmatched."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><img src="../assets/images/avatar-business.png" alt="Samuel O."></div>
+            <div>
+              <div class="testi-name">Samuel O.</div>
+              <div class="testi-role">Micro-Farm Owner · Commercial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Unlock the Master<br>Experience Today</h2>
+        <p class="cta-banner-sub">Join our elite community of serious cultivators. 14-day free trial, no commitment.</p>
+        <div class="cta-banner-btns">
+          <button class="btn btn-white btn-lg" onclick="window.location.href='pricing.html'">See Master Plan</button>
+          <button class="btn btn-outline-white btn-lg" onclick="window.location.href='signup.html'">Start Free Trial</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer same as home1 -->
+  
+</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="logo" style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:0;text-decoration:none;">
+          <div class="logo-icon">🍄</div>
+          Mycelium &amp; Co.
+        </a>
+        <p class="footer-brand-desc">Artisan mushroom cultivation supplies and farm-fresh weekly boxes. Rooted in the earth, delivered to your table.</p>
+        <div class="footer-social">
+          <div class="footer-social-btn">𝕏</div>
+          <div class="footer-social-btn">in</div>
+          <div class="footer-social-btn">ig</div>
+          <div class="footer-social-btn">yt</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <a href="shop.html" class="footer-link">Grow Kits</a>
+        <a href="shop.html" class="footer-link">Spawn &amp; Cultures</a>
+        <a href="shop.html" class="footer-link">Fresh Boxes</a>
+        <a href="shop.html" class="footer-link">Equipment</a>
+        <a href="shop.html" class="footer-link">Books &amp; Guides</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Learn</div>
+        <a href="#" class="footer-link">Growing Guides</a>
+        <a href="#" class="footer-link">Video Tutorials</a>
+        <a href="#" class="footer-link">Foraging Map</a>
+        <a href="#" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Community</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <a href="#" class="footer-link">About Us</a>
+        <a href="#" class="footer-link">Our Farm</a>
+        <a href="pricing.html" class="footer-link">Pricing</a>
+        <a href="#" class="footer-link">Wholesale</a>
+        <a href="#" class="footer-link">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mycelium &amp; Co. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · Cookie Policy</span>
+    </div>
+  </footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

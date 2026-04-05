@@ -1,0 +1,41 @@
+/* =========================================
+   RTL SUPPORT
+   ========================================= */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .header-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero1-content {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero2-content {
+  direction: rtl;
+}
+
+/* Base mirroring for margins/padding if needed */
+[dir="rtl"] .nav-link {
+  margin-left: 0;
+}
+
+[dir="rtl"] .hero1-stat-val, [dir="rtl"] .hero1-stat-label {
+    text-align: right;
+}
+
+[dir="rtl"] .dash-sidebar {
+    border-right: none;
+    border-left: 1px solid var(--border-light);
+}
+
+[dir="rtl"] .dash-nav-link {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dash-nav-badge {
+    margin-left: 0;
+    margin-right: auto;
+}

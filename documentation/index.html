@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | Mycelium &amp; Co. Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #3A6B40; --bg: #F6F1EA; --bg-card: #FDFAF6; --text: #1E1812; --text-muted: #6B5C4A; --border: #D8CCBC; --radius: 12px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; padding: 48px 24px; }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--text); margin-bottom: 12px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--text); margin: 40px 0 16px; }
+    h3 { font-size: 16px; font-weight: 600; color: var(--text); margin: 24px 0 8px; }
+    p { color: var(--text-muted); margin-bottom: 16px; }
+    .badge { display: inline-block; background: rgba(58,107,64,0.1); color: var(--primary); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 20px; }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+    .page-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .page-link { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, transform 0.2s; display: block; }
+    .page-link:hover { box-shadow: 0 4px 20px rgba(30,24,18,0.12); transform: translateY(-2px); }
+    .page-link-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 6px; font-weight: 600; }
+    .page-link-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+    .page-link-desc { font-size: 13px; color: var(--text-muted); }
+    code { background: rgba(58,107,64,0.08); border: 1px solid rgba(58,107,64,0.15); border-radius: 6px; padding: 2px 8px; font-family: monospace; font-size: 13px; color: var(--primary); }
+    pre { background: #1E1812; color: #F0E8DC; border-radius: var(--radius); padding: 20px 24px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: rgba(58,107,64,0.08); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary); padding: 10px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+    td { padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-muted); }
+    td code { font-size: 12px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge">Template Documentation</div>
+    <h1>Mycelium &amp; Co.</h1>
+    <p style="font-size:18px;margin-bottom:40px;">A premium, multi-page HTML template for a mushroom farm and mycology supply brand. Built with vanilla HTML, CSS &amp; JavaScript.</p>
+
+    <hr class="divider">
+
+    <h2>Pages</h2>
+    <div class="page-grid">
+      <a href="../pages/index.html" class="page-link">
+        <div class="page-link-label">Landing</div>
+        <div class="page-link-title">Home Page</div>
+        <div class="page-link-desc">Classic earthy hero, product grid, how-it-works, varieties &amp; testimonials.</div>
+      </a>
+      <a href="../pages/premium.html" class="page-link">
+        <div class="page-link-label">Landing</div>
+        <div class="page-link-title">Premium</div>
+        <div class="page-link-desc">Dark luxury landing for the Master Grower subscription plan.</div>
+      </a>
+      <a href="../pages/shop.html" class="page-link">
+        <div class="page-link-label">Commerce</div>
+        <div class="page-link-title">Shop</div>
+        <div class="page-link-desc">Product catalogue with filterable category tabs.</div>
+      </a>
+      <a href="../pages/pricing.html" class="page-link">
+        <div class="page-link-label">Commerce</div>
+        <div class="page-link-title">Pricing</div>
+        <div class="page-link-desc">Three-tier pricing cards (Starter / Grower / Master) and FAQ.</div>
+      </a>
+      <a href="../pages/login.html" class="page-link">
+        <div class="page-link-label">Auth</div>
+        <div class="page-link-title">Login</div>
+        <div class="page-link-desc">Email &amp; social sign-in with password visibility toggle.</div>
+      </a>
+      <a href="../pages/signup.html" class="page-link">
+        <div class="page-link-label">Auth</div>
+        <div class="page-link-title">Sign Up</div>
+        <div class="page-link-desc">Registration form with 14-day free trial CTA.</div>
+      </a>
+      <a href="../pages/dashboard.html" class="page-link">
+        <div class="page-link-label">App</div>
+        <div class="page-link-title">Dashboard</div>
+        <div class="page-link-desc">Subscriber dashboard: deliveries, variety picker, guides, notifications &amp; settings.</div>
+      </a>
+    </div>
+
+    <hr class="divider">
+
+    <h2>Design Tokens</h2>
+    <p>All tokens are CSS variables defined at the top of <code>style.css</code>.</p>
+    <table>
+      <tr><th>Variable</th><th>Value</th><th>Use</th></tr>
+      <tr><td><code>--primary</code></td><td>#3A6B40</td><td>Forest green — CTAs, accents</td></tr>
+      <tr><td><code>--secondary</code></td><td>#9B5C28</td><td>Earthy brown — secondary accents</td></tr>
+      <tr><td><code>--bg</code></td><td>#F6F1EA</td><td>Warm cream page background</td></tr>
+      <tr><td><code>--bg-card</code></td><td>#FDFAF6</td><td>Card and panel surfaces</td></tr>
+      <tr><td><code>--gold</code></td><td>#C8912A</td><td>Stars, highlights</td></tr>
+      <tr><td><code>--font-display</code></td><td>Playfair Display</td><td>Headlines &amp; titles</td></tr>
+      <tr><td><code>--font-body</code></td><td>Crimson Pro</td><td>Body text</td></tr>
+      <tr><td><code>--font-ui</code></td><td>DM Sans</td><td>Labels, buttons, UI</td></tr>
+    </table>
+
+    <hr class="divider">
+
+    <h2>Dark Mode &amp; RTL</h2>
+    <div class="card">
+      <h3>Dark Mode</h3>
+      <p>Activate by toggling the <code>data-theme</code> attribute on <code>&lt;html&gt;</code>. A toggle button is included in every page header.</p>
+      <pre>document.documentElement.setAttribute('data-theme', 'dark');</pre>
+    </div>
+    <div class="card">
+      <h3>RTL</h3>
+      <p>Activate by setting the <code>dir</code> attribute on <code>&lt;html&gt;</code>. A toggle button is available in every page header.</p>
+      <pre>document.documentElement.dir = 'rtl';</pre>
+    </div>
+  </div>
+</body>
+</html>
