@@ -1,17 +1,40 @@
 // =====================
-// THEME TOGGLE
+// THEME INIT & TOGGLE
 // =====================
+function initTheme() {
+  const savedTheme = localStorage.getItem('mycelium_theme');
+  const html = document.documentElement;
+  
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+  }
+  
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  const iconDark = document.getElementById('themeIconDark');
+  const iconLight = document.getElementById('themeIconLight');
+  
+  if (iconDark && iconLight) {
+    iconDark.style.display = isDark ? 'none' : '';
+    iconLight.style.display = isDark ? '' : 'none';
+  }
+}
+
+// Call on startup
+initTheme();
+
 function toggleTheme() {
   const html = document.documentElement;
   const isDark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  const newTheme = isDark ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('mycelium_theme', newTheme);
   
   const iconDark = document.getElementById('themeIconDark');
   const iconLight = document.getElementById('themeIconLight');
   
   if (iconDark && iconLight) {
-    iconDark.style.display = isDark ? '' : 'none';
-    iconLight.style.display = isDark ? 'none' : '';
+    iconDark.style.display = newTheme === 'dark' ? 'none' : '';
+    iconLight.style.display = newTheme === 'dark' ? '' : 'none';
   }
 }
 
@@ -45,25 +68,24 @@ function togglePwd(id, btn) {
 }
 
 // =====================
-// HEADER SCROLL EFFECT
+// ENHANCED HEADER GLASS ON SCROLL
 // =====================
 window.addEventListener('scroll', () => {
   const h = document.getElementById('mainHeader');
-  if (h) h.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(30,24,18,0.1)' : '';
-});
+  if (!h) return;
+  if (window.scrollY > 20) {
+    h.style.boxShadow = '0 8px 40px rgba(26,21,16,0.15), 0 0 0 1px rgba(255,255,255,0.5) inset';
+    h.style.backdropFilter = 'blur(28px) saturate(200%)';
+  } else {
+    h.style.boxShadow = '';
+    h.style.backdropFilter = '';
+  }
+}, { passive: true });
 
-// Setup active navigation state based on current URL path
+// =====================
+// SCROLL-TRIGGERED FADE-UP ANIMATIONS (IntersectionObserver)
+// =====================
 document.addEventListener('DOMContentLoaded', () => {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-    }
-  });
-
   // Set initial theme icon
   const html = document.documentElement;
   const isDark = html.getAttribute('data-theme') === 'dark';
@@ -74,6 +96,31 @@ document.addEventListener('DOMContentLoaded', () => {
     iconDark.style.display = isDark ? 'none' : '';
     iconLight.style.display = isDark ? '' : 'none';
   }
+
+  // Setup active navigation state based on current URL path
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
+  // Scroll-triggered fade-up via IntersectionObserver
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    fadeObserver.observe(el);
+  });
 });
 
 // =====================
@@ -108,7 +155,7 @@ function showToast(message) {
       if (toast.parentElement) {
         toast.remove();
       }
-    }, 300); // Wait for transition to finish
+    }, 300);
   }, 2500);
 }
 
@@ -120,7 +167,6 @@ function handleLogout(event, redirectUrl = '../index.html') {
   
   showToast("Logged out successfully");
   
-  // Wait for the user to see the toast before redirecting
   setTimeout(() => {
     window.location.href = redirectUrl;
   }, 1200);
@@ -145,4 +191,3 @@ function toggleDashSidebar() {
     sidebar.classList.toggle('active');
   }
 }
-

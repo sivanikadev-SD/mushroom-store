@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
 </head>
 <body>
@@ -31,8 +32,10 @@
             <a href="index-2.html" class="dropdown-link">Home 2 (Shop)</a>
           </div>
         </div>
+        <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="premium.html">Premium</a>
-        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link active" href="shop.html">Shop</a>
+        <a class="nav-link" href="contact.html">Contact</a>
         <a class="nav-link" href="pricing.html">Pricing</a>
         <a class="nav-link" href="dashboard.html">Dashboard</a>
       </nav>
@@ -53,8 +56,8 @@
     </button>
   </div>
 </header>
-<div class="shop-hero">
-    <div class="container">
+<div class="shop-hero fade-up">
+    <div class="container" style="margin-top:40px;">
       <span class="section-label">Our Store</span>
       <h1 class="section-title">Mycology <em>Supply Shop</em></h1>
       <p class="section-sub">Cultivation supplies, grow kits, fresh produce, and educational resources — everything a grower needs.</p>
@@ -69,7 +72,7 @@
       </div>
     </div>
   </div>
-  <section class="section">
+  <section class="section fade-up fade-up-1">
     <div class="container">
       <div class="products-grid">
         <div class="product-card"><div class="product-img"><img src="../assets/images/lions-mane.png" alt="Lion's Mane Grow Kit"><div class="product-badge">Best Seller</div></div><div class="product-body"><div class="product-name">Lion's Mane Grow Kit</div><div class="product-desc">Ready-to-fruit block. Harvest 2–3 flushes at home.</div><div class="product-footer"><div class="product-price">$34<span>/kit</span></div><button class="btn btn-primary btn-sm">Add to Cart</button></div></div></div>
@@ -84,6 +87,108 @@
     </div>
   </section>
   
+  <!-- Content additions to reach 8 sections -->
+  <div class="shop-categories fade-up">
+    <div class="shop-cat-card" onclick="window.location.href='shop.html'">
+      <div class="shop-cat-icon">🍄</div>
+      <div class="shop-cat-title">Grow Kits</div>
+      <div class="shop-cat-link">Explore →</div>
+    </div>
+    <div class="shop-cat-card" onclick="window.location.href='shop.html'">
+      <div class="shop-cat-icon">🧫</div>
+      <div class="shop-cat-title">Cultures</div>
+      <div class="shop-cat-link">Explore →</div>
+    </div>
+    <div class="shop-cat-card" onclick="window.location.href='shop.html'">
+      <div class="shop-cat-icon">⚗️</div>
+      <div class="shop-cat-title">Lab Gear</div>
+      <div class="shop-cat-link">Explore →</div>
+    </div>
+    <div class="shop-cat-card" onclick="window.location.href='shop.html'">
+      <div class="shop-cat-icon">📚</div>
+      <div class="shop-cat-title">Education</div>
+      <div class="shop-cat-link">Explore →</div>
+    </div>
+  </div>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="farm-banner">
+        <div class="farm-banner-content">
+          <span class="section-label" style="color:var(--primary-light)">Our Origin</span>
+          <h3>Grown with intention.</h3>
+          <p>Every premium order is harvested the same day it ships from our isolated sterile flowering rooms.</p>
+        </div>
+        <img src="../assets/images/hero-farm.png" class="farm-banner-img" alt="Premium Lab">
+      </div>
+    </div>
+  </section>
+
+  <div class="features-strip fade-up">
+    <div class="features-strip-inner">
+      <div class="feature-strip-item"><span class="feature-strip-icon">🚚</span> Free delivery on all boxes</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">🌿</span> 100% certified organic</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">📦</span> Skip or cancel anytime</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">🧪</span> Expert growing support</div>
+    </div>
+  </div>
+
+  <section class="section how-bg fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Grower <em>Reviews</em></h2>
+      </div>
+      <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"High-quality cultures and fantastic customer service."</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We rely on Mycelium & Co for all our spawn bags. Incredible yield every time."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Shop <em>FAQ</em></h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">When will my kit ship?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">All kits ship within 24 hours of ordering.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">How long does a kit take to fruit?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Most of our kits will begin to fruit within 7-14 days, depending on the variety and your indoor environment.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Do I need special equipment for the grow kits?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">No! Everything you need is included in the box. You just need a spray bottle (provided) and a little bit of water.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">How many harvests can I get from one kit?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">You can usually get 2-3 harvests (flushes) from a single kit before the substrate is exhausted.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Start Your Grow Today</h2>
+        <p class="cta-banner-sub">Premium supplies shipped direct from our farm to your door.</p>
+        <div class="cta-banner-btns">
+          <button class="btn btn-white btn-lg" onclick="window.location.href='pricing.html'">View Plans</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <footer class="footer">
@@ -95,10 +200,10 @@
         </a>
         <p class="footer-brand-desc">Artisan mushroom cultivation supplies and farm-fresh weekly boxes. Rooted in the earth, delivered to your table.</p>
         <div class="footer-social">
-          <div class="footer-social-btn">𝕏</div>
-          <div class="footer-social-btn">in</div>
-          <div class="footer-social-btn">ig</div>
-          <div class="footer-social-btn">yt</div>
+          <div class="footer-social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-youtube"></i></div>
         </div>
       </div>
       <div>
@@ -119,11 +224,11 @@
       </div>
       <div>
         <div class="footer-col-title">Company</div>
-        <a href="#" class="footer-link">About Us</a>
-        <a href="#" class="footer-link">Our Farm</a>
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="about.html" class="footer-link">Our Farm</a>
         <a href="pricing.html" class="footer-link">Pricing</a>
-        <a href="#" class="footer-link">Wholesale</a>
-        <a href="#" class="footer-link">Contact</a>
+        <a href="contact.html" class="footer-link">Wholesale</a>
+        <a href="contact.html" class="footer-link">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">

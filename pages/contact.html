@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Get In Touch | Mycelium &amp; Co.</title>
+  <meta name="description" content="Reach out to our experts for support, wholesale inquiries, or general questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
+</head>
+<body>
+  <header class="header" id="mainHeader">
+  <div class="header-inner">
+    <a href="../index.html" class="logo">
+      <div class="logo-icon">🍄</div>
+      <span>Mycelium<em style="font-style:italic;color:var(--primary)"> &amp; Co.</em></span>
+    </a>
+    <div class="nav-wrapper" id="navWrapper">
+      <nav class="nav">
+        <div class="nav-dropdown">
+          <a class="nav-link" href="../index.html" style="display:flex;align-items:center;gap:4px">
+            Home
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-link">Home 1 (Classic)</a>
+            <a href="index-2.html" class="dropdown-link">Home 2 (Shop)</a>
+          </div>
+        </div>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="premium.html">Premium</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">
+          <svg id="themeIconDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="themeIconLight" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 10H3M21 6H3M21 14H3M17 18H3"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm">Dashboard</a>
+      </div>
+    </div>
+    <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+</header>
+
+  <!-- Section 1: Hero -->
+  <div class="pricing-hero fade-up">
+    <div class="container">
+      <span class="section-label">Connect With Us</span>
+      <h1 class="section-title">We'd Love to <em>Hear From You</em></h1>
+      <p class="section-sub" style="margin:0 auto">Whether you're looking for cultivation advice, wholesale pricing, or have a simple question.</p>
+    </div>
+  </div>
+
+  <!-- Section 2: Features Strip -->
+  <div class="features-strip fade-up fade-up-1">
+    <div class="features-strip-inner">
+      <div class="feature-strip-item"><span class="feature-strip-icon">✉️</span> 24h Response Time</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">👩‍🔬</span> Expert Mycology Support</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">📦</span> Wholesale Specialists</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">📞</span> Dedicated Phone Line</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Contact Form & Info Grid -->
+  <section class="section fade-up fade-up-2">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+        <div class="dash-card">
+          <h3 style="font-family:var(--font-display); font-size:24px; margin-bottom:20px;">Send a Message</h3>
+          <form style="display:flex; flex-direction:column; gap:16px;">
+            <div>
+              <label class="form-label">Name</label>
+              <input type="text" class="form-input" placeholder="Your Name">
+            </div>
+            <div>
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" placeholder="you@example.com">
+            </div>
+            <div>
+              <label class="form-label">Inquiry Type</label>
+              <select class="form-input">
+                <option>General Support</option>
+                <option>Cultivation Advice</option>
+                <option>Wholesale Order</option>
+                <option>Press/Media</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Message</label>
+              <textarea class="form-input" rows="4" placeholder="How can we help?"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="showToast('Message sent! We will reply shortly.')">Send Message</button>
+          </form>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-display); font-size:24px; margin-bottom:20px;">Contact Details</h3>
+          <div class="dash-card" style="margin-bottom: 20px;">
+            <div style="font-weight:600; margin-bottom:8px;">Farm Headquarters</div>
+            <div style="color:var(--text-muted); font-size:14px;">1200 Spore Lane<br>Portland, OR 97204<br>United States</div>
+          </div>
+          <div class="dash-card" style="margin-bottom: 20px;">
+            <div style="font-weight:600; margin-bottom:8px;">Direct Lines</div>
+            <div style="color:var(--text-muted); font-size:14px;">General: +1 (555) 123-MYCO<br>Wholesale: +1 (555) 123-FARM<br>Email: hello@mycelium.co</div>
+          </div>
+          <div class="dash-card">
+            <div style="font-weight:600; margin-bottom:8px;">Farm Operating Hours</div>
+            <div style="color:var(--text-muted); font-size:14px;">Monday - Friday: 8am - 6pm<br>Saturday: 9am - 2pm<br>Sunday: Closed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Wholesale Block -->
+  <section class="section how-bg fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Wholesale <em>Partnerships</em></h2>
+        <p class="section-sub">We supply top-tier restaurants and markets globally.</p>
+      </div>
+      <div class="premium-grid">
+        <div class="premium-cell">
+          <div class="premium-icon">🚚</div>
+          <div class="premium-title">Priority Shipping</div>
+          <div class="premium-desc">Next-day air shipping on all fresh produce to ensure peak culinary freshness.</div>
+        </div>
+        <div class="premium-cell featured">
+          <div class="premium-icon">🏅</div>
+          <div class="premium-title">Chef's Choice Quality</div>
+          <div class="premium-desc">Specially curated selections graded for uniform size, shape, and optimal plating.</div>
+        </div>
+        <div class="premium-cell">
+          <div class="premium-icon">📉</div>
+          <div class="premium-title">Volume Pricing</div>
+          <div class="premium-desc">Significant discounts available for recurring large-volume orders and restaurant partners.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Farm Banner -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="farm-banner">
+        <div class="farm-banner-content">
+          <span class="section-label" style="color:var(--primary-light)">Come Visit (Virtual)</span>
+          <h3>See where the magic grows.</h3>
+          <p>Book a virtual tour of our sterilized lab environments and fruiting chambers to see exactly how your mushrooms are cultivated.</p>
+          <button class="btn btn-white" onclick="showToast('Tours opening next month!')">Book Virtual Tour</button>
+        </div>
+        <img src="../assets/images/hero-farm.png" class="farm-banner-img" alt="Virtual Tour">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: FAQ -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Common <em>Questions</em></h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Do you ship internationally?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">We currently ship hardware and dried goods internationally. Fresh boxes and live cultures are limited to domestic shipping.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">What if my grow kit doesn't fruit?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">We guarantee our kits. If you follow the provided instructions and your kit fails to pin within 30 days, we'll send a replacement free of charge.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Can I pause or cancel my subscription?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Yes, you can pause or cancel anytime through your dashboard. No long-term commitments required.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">What comes in the standard box?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Each box contains 3-4 varieties of fresh, seasonally available mushrooms, a recipes guide, and a small surprise like a dried herb or seasoning.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Do you ship nationwide?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Currently, we ship to all contiguous 48 states to ensure mushroom freshness upon delivery.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Testimonials -->
+  <section class="section how-bg fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">What They <em>Say</em></h2>
+      </div>
+      <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Customer service is unparalleled. They walked me through my first agar transfer step-by-step."</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"My restaurant's weekly order arrived delayed by the courier, and Mycelium & Co immediately overnighted a fresh batch."</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"It feels more like a community than a business. The support team treats you like a fellow scientist."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: CTA Banner -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Join The Network</h2>
+        <p class="cta-banner-sub">Subscribe to our newsletter for exclusive drops, cultivation guides, and farm updates.</p>
+        <div class="cta-banner-btns">
+          <input type="email" placeholder="Email Address" style="padding:10px 20px; border-radius:30px; border:none; outline:none; font-family:var(--font-ui)">
+          <button class="btn btn-outline-white" onclick="showToast('Subscribed!')">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="logo" style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:0;text-decoration:none;">
+          <div class="logo-icon">🍄</div>
+          Mycelium &amp; Co.
+        </a>
+        <p class="footer-brand-desc">Artisan mushroom cultivation supplies and farm-fresh weekly boxes. Rooted in the earth, delivered to your table.</p>
+        <div class="footer-social">
+          <div class="footer-social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-youtube"></i></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <a href="shop.html" class="footer-link">Grow Kits</a>
+        <a href="shop.html" class="footer-link">Spawn &amp; Cultures</a>
+        <a href="shop.html" class="footer-link">Fresh Boxes</a>
+        <a href="shop.html" class="footer-link">Equipment</a>
+        <a href="shop.html" class="footer-link">Books &amp; Guides</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Learn</div>
+        <a href="#" class="footer-link">Growing Guides</a>
+        <a href="#" class="footer-link">Video Tutorials</a>
+        <a href="#" class="footer-link">Foraging Map</a>
+        <a href="#" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Community</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="about.html" class="footer-link">Our Farm</a>
+        <a href="pricing.html" class="footer-link">Pricing</a>
+        <a href="contact.html" class="footer-link">Wholesale</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mycelium &amp; Co. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · Cookie Policy</span>
+    </div>
+  </footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

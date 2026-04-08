@@ -1,32 +1,143 @@
 /* =========================================
-   DARK MODE
+   DARK MODE — RICH GLASSMORPHISM
    ========================================= */
 [data-theme="dark"] {
-  --bg: #0F0C08;
-  --bg-card: #1A1510;
-  --bg-subtle: #231D15;
-  --text: #F0E8DC;
-  --text-muted: #A89880;
-  --text-light: #6B5C4A;
-  --border: #352D22;
-  --border-light: #2A2218;
-  --shadow-sm: 0 1px 4px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
+  --bg: #100D09;
+  --bg-card: rgba(28, 22, 16, 0.55);
+  --bg-subtle: rgba(38, 30, 22, 0.6);
+  --text: #F2EAE0;
+  --text-muted: #B8A898;
+  --text-light: #7A6A5A;
+  --border: rgba(60, 48, 36, 0.65);
+  --border-light: rgba(255, 255, 255, 0.07);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.06) inset;
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  --glass-bg: rgba(22, 17, 12, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-blur: blur(20px) saturate(160%);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 10%, rgba(62, 114, 69, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 0%, rgba(168, 96, 48, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 70% at 50% 100%, rgba(62, 114, 69, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 0% 60%, rgba(200, 145, 42, 0.08) 0%, transparent 50%);
+}
+
+[data-theme="dark"] body::after {
+  background:
+    radial-gradient(circle 500px at 8% 20%, rgba(62, 114, 69, 0.18) 0%, transparent 70%),
+    radial-gradient(circle 400px at 92% 15%, rgba(168, 96, 48, 0.14) 0%, transparent 70%),
+    radial-gradient(circle 350px at 50% 85%, rgba(62, 114, 69, 0.12) 0%, transparent 60%);
 }
 
 [data-theme="dark"] .header {
-  background: rgba(15,12,8,0.92);
+  background: rgba(16, 13, 9, 0.75);
+  border-color: rgba(255, 255, 255, 0.07);
 }
 
 [data-theme="dark"] .hero1 {
-  background: linear-gradient(135deg, #1A1410 0%, #141008 100%);
+  background: linear-gradient(150deg, #1E1810 0%, #181410 25%, #141008 55%, #100C06 100%);
 }
 
-[data-theme="dark"] .hero2 { 
-  background: #0A0806; 
+[data-theme="dark"] .hero2 {
+  background: #0A0806;
 }
 
-[data-theme="dark"] .hero2-stat { 
-  background: #1A1510; 
+[data-theme="dark"] .hero2-stat {
+  background: rgba(26, 21, 16, 0.7);
+}
+
+[data-theme="dark"] .how-bg {
+  background: rgba(22, 17, 12, 0.7);
+}
+
+[data-theme="dark"] .how-bg::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 100%);
+}
+
+[data-theme="dark"] .features-strip {
+  background: linear-gradient(135deg, #1C3A20 0%, #2C5530 100%);
+}
+
+[data-theme="dark"] .cta-banner {
+  background: linear-gradient(135deg, #1C3A20 0%, #2C5530 50%, #3E7245 100%);
+}
+
+[data-theme="dark"] .farm-banner {
+  background: rgba(26, 21, 16, 0.85);
+}
+
+[data-theme="dark"] .footer {
+  background: rgba(14, 11, 8, 0.72);
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .product-img {
+  background: rgba(35, 28, 20, 0.8);
+}
+
+[data-theme="dark"] .pricing-card.popular {
+  border-color: var(--primary-light);
+  background: rgba(62, 114, 69, 0.15);
+  box-shadow: 0 0 0 4px rgba(106, 168, 113, 0.1), var(--shadow-lg);
+}
+
+[data-theme="dark"] .form-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+[data-theme="dark"] .form-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(106, 168, 113, 0.15);
+}
+
+[data-theme="dark"] .auth-social-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .auth-social-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--primary-light);
+}
+
+[data-theme="dark"] .shop-hero {
+  background: linear-gradient(rgba(16, 13, 9, 0.8), rgba(16, 13, 9, 0.6)), url('../images/banner-shop-bounty.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+[data-theme="dark"] .pricing-hero {
+  background: linear-gradient(rgba(16, 13, 9, 0.82), rgba(16, 13, 9, 0.65)), url('../images/banner-misty-forest.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+[data-theme="dark"] .premium-cell.featured {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+[data-theme="dark"] .hero2-mosaic-item:nth-child(2) {
+  background: linear-gradient(145deg, #8A6030, #5A3818);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  background: rgba(106, 168, 113, 0.12);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(106, 168, 113, 0.35);
+}
+
+[data-theme="dark"] .delivery-dot-main {
+  background: rgba(28, 22, 16, 0.8);
 }

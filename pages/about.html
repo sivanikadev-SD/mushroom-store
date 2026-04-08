@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Our Story | Mycelium &amp; Co.</title>
+  <meta name="description" content="Learn about our farm, our mycologists, and our mission to spread the magic of mushrooms.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
+</head>
+<body>
+  <header class="header" id="mainHeader">
+  <div class="header-inner">
+    <a href="../index.html" class="logo">
+      <div class="logo-icon">🍄</div>
+      <span>Mycelium<em style="font-style:italic;color:var(--primary)"> &amp; Co.</em></span>
+    </a>
+    <div class="nav-wrapper" id="navWrapper">
+      <nav class="nav">
+        <div class="nav-dropdown">
+          <a class="nav-link" href="../index.html" style="display:flex;align-items:center;gap:4px">
+            Home
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../index.html" class="dropdown-link">Home 1 (Classic)</a>
+            <a href="index-2.html" class="dropdown-link">Home 2 (Shop)</a>
+          </div>
+        </div>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="premium.html">Premium</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">
+          <svg id="themeIconDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="themeIconLight" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 10H3M21 6H3M21 14H3M17 18H3"/></svg>
+        </button>
+        <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm">Dashboard</a>
+      </div>
+    </div>
+    <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+</header>
+
+  <!-- Section 1: Hero -->
+  <div class="pricing-hero fade-up">
+    <div class="container">
+      <span class="section-label">Our Story</span>
+      <h1 class="section-title">Rooted in <em>Nature</em></h1>
+      <p class="section-sub" style="margin:0 auto">We are a passionate team of mycologists dedicated to bringing the freshest, most exotic fungi directly to your table.</p>
+    </div>
+  </div>
+
+  <!-- Section 2: Features Strip -->
+  <div class="features-strip fade-up fade-up-1">
+    <div class="features-strip-inner">
+      <div class="feature-strip-item"><span class="feature-strip-icon">🌱</span> 100% Organic</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">🌍</span> Sustainably Harvested</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">🔬</span> Lab-Tested Spores</div>
+      <div class="feature-strip-item"><span class="feature-strip-icon">🍄</span> 32+ Varieties</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Mission Options Grid -->
+  <section class="section fade-up fade-up-2">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Our <em>Mission</em></h2>
+        <p class="section-sub">More than just mushrooms. We believe in fungi as a force for wellbeing, sustainability, and gastronomical joy.</p>
+      </div>
+      <div class="premium-grid">
+        <div class="premium-cell">
+          <div class="premium-icon">🍽️</div>
+          <div class="premium-title">Culinary Excellence</div>
+          <div class="premium-desc">Delivering chef-grade mushrooms that elevate every meal, grown right here in our climate-controlled facilities.</div>
+        </div>
+        <div class="premium-cell featured">
+          <div class="premium-icon">♻️</div>
+          <div class="premium-title">Zero Waste</div>
+          <div class="premium-desc">All our spent substrate is composted and donated to local organic farms, closing the loop.</div>
+        </div>
+        <div class="premium-cell">
+          <div class="premium-icon">📚</div>
+          <div class="premium-title">Education First</div>
+          <div class="premium-desc">Empowering the next generation of home growers through comprehensive workshops and masterclasses.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Farm Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="farm-banner fade-up">
+        <div class="farm-banner-content">
+          <span class="section-label" style="color:var(--primary-light)">Our Urban Farm</span>
+          <h3>Grown with intention, harvested by hand.</h3>
+          <p>Located in the heart of the city, our vertical farm utilizes advanced environmental controls to replicate the perfect autumnal forest conditions for our 32 exotic varieties. Every kit and box is packed fresh the morning of delivery.</p>
+          <button class="btn btn-white" onclick="window.location.href='shop.html'">Explore Our Farm Offerings</button>
+        </div>
+        <img src="../assets/images/hero-farm.png" class="farm-banner-img" alt="Indoor Mushroom Farm">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Team Grid -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Meet The <em>Mycelium Makers</em></h2>
+      </div>
+      <div class="testimonials-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="testi-card" style="text-align: center;">
+          <div class="testi-avatar" style="margin: 0 auto 15px auto; width: 80px; height: 80px;"><img src="../assets/images/avatar-scientist.png" alt="Dr. Lena K."></div>
+          <div class="testi-name">Dr. Lena K.</div>
+          <div class="testi-role" style="margin-bottom: 10px;">Lead Mycologist</div>
+          <p class="testi-text" style="font-style:normal;">"I've spent 15 years studying fungal genetics. Bringing perfect sterile cultures to the public is my passion."</p>
+        </div>
+        <div class="testi-card" style="text-align: center;">
+          <div class="testi-avatar" style="margin: 0 auto 15px auto; width: 80px; height: 80px;"><img src="../assets/images/avatar-farmer.png" alt="Marcus T."></div>
+          <div class="testi-name">Marcus T.</div>
+          <div class="testi-role" style="margin-bottom: 10px;">Farm Director</div>
+          <p class="testi-text" style="font-style:normal;">"Ensuring optimal pinning environments across 10,000 blocks daily is an art I love waking up to."</p>
+        </div>
+        <div class="testi-card" style="text-align: center;">
+          <div class="testi-avatar" style="margin: 0 auto 15px auto; width: 80px; height: 80px;"><img src="../assets/images/avatar-chef.png" alt="Chef Alain D."></div>
+          <div class="testi-name">Alain D.</div>
+          <div class="testi-role" style="margin-bottom: 10px;">Culinary Director</div>
+          <p class="testi-text" style="font-style:normal;">"My job is taking these incredible harvests and showing you exactly how to make them sing in the pan."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Varieties Teaser -->
+  <section class="section how-bg fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Our Diverse <em>Ecosystem</em></h2>
+        <p class="section-sub">We cultivate 32 species, ranging from delicate medicinals to robust culinary staples.</p>
+      </div>
+      <div class="varieties-grid">
+        <div class="variety-card">
+          <div class="variety-img-wrap">
+            <img src="../assets/images/variety-lions-mane.png" alt="Lion's Mane">
+          </div>
+          <div class="variety-name">Lion's Mane</div>
+        </div>
+        <div class="variety-card">
+          <div class="variety-img-wrap">
+            <img src="../assets/images/variety-pink-oyster.png" alt="Pink Oyster">
+          </div>
+          <div class="variety-name">Pink Oyster</div>
+        </div>
+        <div class="variety-card">
+          <div class="variety-img-wrap">
+            <img src="../assets/images/variety-reishi.png" alt="Reishi">
+          </div>
+          <div class="variety-name">Reishi</div>
+        </div>
+        <div class="variety-card">
+          <div class="variety-img-wrap">
+            <img src="../assets/images/variety-king-oyster.png" alt="King Oyster">
+          </div>
+          <div class="variety-name">King Oyster</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: FAQ -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Questions About <em>Our Farm</em>?</h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Do you offer farm tours?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Currently, our farm operates in a highly-sterilized environment, so public tours are restricted to maintain purity. We do offer virtual tours during our Masterclasses!</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Where do you source your spores?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Most of our proprietary strains are generated in-house through selective breeding by our mycologists over the last decade.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Can I pause or cancel my subscription?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Yes, you can pause or cancel anytime through your dashboard. No long-term commitments required.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">What comes in the standard box?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Each box contains 3-4 varieties of fresh, seasonally available mushrooms, a recipes guide, and a small surprise like a dried herb or seasoning.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Do you ship nationwide?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Currently, we ship to all contiguous 48 states to ensure mushroom freshness upon delivery.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: CTA Banner -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="cta-banner-title">Ready to Join<br>The Mycelial Network?</h2>
+        <p class="cta-banner-sub">Join thousands of home growers and cooks exploring the world of exotic fungi.</p>
+        <div class="cta-banner-btns">
+          <button class="btn btn-white btn-lg" onclick="window.location.href='shop.html'">Shop Supplies</button>
+          <button class="btn btn-outline-white btn-lg" onclick="window.location.href='contact.html'">Get in Touch</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html" class="logo" style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:0;text-decoration:none;">
+          <div class="logo-icon">🍄</div>
+          Mycelium &amp; Co.
+        </a>
+        <p class="footer-brand-desc">Artisan mushroom cultivation supplies and farm-fresh weekly boxes. Rooted in the earth, delivered to your table.</p>
+        <div class="footer-social">
+          <div class="footer-social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-youtube"></i></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <a href="shop.html" class="footer-link">Grow Kits</a>
+        <a href="shop.html" class="footer-link">Spawn &amp; Cultures</a>
+        <a href="shop.html" class="footer-link">Fresh Boxes</a>
+        <a href="shop.html" class="footer-link">Equipment</a>
+        <a href="shop.html" class="footer-link">Books &amp; Guides</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Learn</div>
+        <a href="#" class="footer-link">Growing Guides</a>
+        <a href="#" class="footer-link">Video Tutorials</a>
+        <a href="#" class="footer-link">Foraging Map</a>
+        <a href="#" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Community</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="about.html" class="footer-link">Our Farm</a>
+        <a href="pricing.html" class="footer-link">Pricing</a>
+        <a href="contact.html" class="footer-link">Wholesale</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mycelium &amp; Co. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · Cookie Policy</span>
+    </div>
+  </footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
 </head>
 <body>
@@ -31,8 +32,10 @@
             <a href="pages/index-2.html" class="dropdown-link">Home 2 (Shop)</a>
           </div>
         </div>
+        <a class="nav-link" href="pages/about.html">About</a>
         <a class="nav-link" href="pages/premium.html">Premium</a>
         <a class="nav-link" href="pages/shop.html">Shop</a>
+        <a class="nav-link" href="pages/contact.html">Contact</a>
         <a class="nav-link" href="pages/pricing.html">Pricing</a>
         <a class="nav-link" href="pages/dashboard.html">Dashboard</a>
       </nav>
@@ -102,7 +105,7 @@
   </section>
 
   <!-- Features Strip -->
-  <div class="features-strip">
+  <div class="features-strip fade-up fade-up-1">
     <div class="features-strip-inner">
       <div class="feature-strip-item"><span class="feature-strip-icon">🚚</span> Free delivery on all boxes</div>
       <div class="feature-strip-item"><span class="feature-strip-icon">🌿</span> 100% certified organic</div>
@@ -112,7 +115,7 @@
   </div>
 
   <!-- Featured Products -->
-  <section class="section">
+  <section class="section fade-up">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Our Products</span>
@@ -179,7 +182,7 @@
   </section>
 
   <!-- How It Works -->
-  <section class="section how-bg">
+  <section class="section how-bg fade-up">
     <div class="container">
       <div class="section-header center">
         <span class="section-label">The Process</span>
@@ -216,7 +219,7 @@
   </section>
 
   <!-- Varieties -->
-  <section class="section">
+  <section class="section fade-up">
     <div class="container">
       <div class="section-header center">
         <span class="section-label">Varieties</span>
@@ -224,32 +227,44 @@
       </div>
       <div class="varieties-grid">
         <div class="variety-card">
-          <span class="variety-emoji">🦁</span>
+          <div class="variety-img-wrap">
+            <img src="assets/images/variety-lions-mane.png" alt="Lion's Mane">
+          </div>
           <div class="variety-name">Lion's Mane</div>
           <div class="variety-tag">Cognitive</div>
         </div>
         <div class="variety-card">
-          <span class="variety-emoji">🌸</span>
+          <div class="variety-img-wrap">
+            <img src="assets/images/variety-pink-oyster.png" alt="Pink Oyster">
+          </div>
           <div class="variety-name">Pink Oyster</div>
           <div class="variety-tag">Culinary</div>
         </div>
         <div class="variety-card">
-          <span class="variety-emoji">🍂</span>
+          <div class="variety-img-wrap">
+            <img src="assets/images/variety-shiitake.png" alt="Shiitake">
+          </div>
           <div class="variety-name">Shiitake</div>
           <div class="variety-tag">Classic</div>
         </div>
         <div class="variety-card">
-          <span class="variety-emoji">🔴</span>
+          <div class="variety-img-wrap">
+            <img src="assets/images/variety-reishi.png" alt="Reishi">
+          </div>
           <div class="variety-name">Reishi</div>
           <div class="variety-tag">Medicinal</div>
         </div>
         <div class="variety-card">
-          <span class="variety-emoji">🟡</span>
+          <div class="variety-img-wrap">
+            <img src="assets/images/variety-chanterelle.png" alt="Chanterelle">
+          </div>
           <div class="variety-name">Chanterelle</div>
           <div class="variety-tag">Gourmet</div>
         </div>
         <div class="variety-card">
-          <span class="variety-emoji">🍄</span>
+          <div class="variety-img-wrap">
+            <img src="assets/images/variety-king-oyster.png" alt="King Oyster">
+          </div>
           <div class="variety-name">King Oyster</div>
           <div class="variety-tag">Culinary</div>
         </div>
@@ -258,7 +273,7 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="section how-bg">
+  <section class="section how-bg fade-up">
     <div class="container">
       <div class="section-header center">
         <span class="section-label">Reviews</span>
@@ -335,8 +350,39 @@
     </div>
   </section>
 
+  <!-- FAQ Section (8th Section) -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Common <em>Questions</em></h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <div class="dash-card" style="cursor:pointer">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">When will my first box arrive?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Orders placed before Thursday ship the following Tuesday. You'll receive tracking details via email.</div>
+        </div>
+        <div class="dash-card" style="cursor:pointer">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Are all mushrooms organically grown?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Absolutely. Every mushroom we grow is certified organic, cultivated on natural substrates with zero synthetic inputs.</div>
+        </div>
+        <div class="dash-card" style="cursor:pointer">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Can I pause or cancel my subscription?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Yes, you can pause or cancel anytime through your dashboard. No long-term commitments required.</div>
+        </div>
+        <div class="dash-card" style="cursor:pointer">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">What comes in the standard box?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Each box contains 3-4 varieties of fresh, seasonally available mushrooms, a recipes guide, and a small surprise like a dried herb or seasoning.</div>
+        </div>
+        <div class="dash-card" style="cursor:pointer">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Do you ship nationwide?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Currently, we ship to all contiguous 48 states to ensure mushroom freshness upon delivery.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
-  <section class="section">
+  <section class="section fade-up">
     <div class="container">
       <div class="cta-banner">
         <h2 class="cta-banner-title">Ready to Grow Something<br>Extraordinary?</h2>
@@ -362,10 +408,10 @@
         </a>
         <p class="footer-brand-desc">Artisan mushroom cultivation supplies and farm-fresh weekly boxes. Rooted in the earth, delivered to your table.</p>
         <div class="footer-social">
-          <div class="footer-social-btn">𝕏</div>
-          <div class="footer-social-btn">in</div>
-          <div class="footer-social-btn">ig</div>
-          <div class="footer-social-btn">yt</div>
+          <div class="footer-social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-youtube"></i></div>
         </div>
       </div>
       <div>
@@ -386,11 +432,11 @@
       </div>
       <div>
         <div class="footer-col-title">Company</div>
-        <a href="#" class="footer-link">About Us</a>
-        <a href="#" class="footer-link">Our Farm</a>
+        <a href="pages/about.html" class="footer-link">About Us</a>
+        <a href="pages/about.html" class="footer-link">Our Farm</a>
         <a href="pages/pricing.html" class="footer-link">Pricing</a>
-        <a href="#" class="footer-link">Wholesale</a>
-        <a href="#" class="footer-link">Contact</a>
+        <a href="pages/contact.html" class="footer-link">Wholesale</a>
+        <a href="pages/contact.html" class="footer-link">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">

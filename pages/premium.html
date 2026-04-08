@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
 </head>
 <body>
@@ -31,8 +32,10 @@
             <a href="index-2.html" class="dropdown-link">Home 2 (Shop)</a>
           </div>
         </div>
-        <a class="nav-link" href="premium.html">Premium</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="premium.html">Premium</a>
         <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="contact.html">Contact</a>
         <a class="nav-link" href="pricing.html">Pricing</a>
         <a class="nav-link" href="dashboard.html">Dashboard</a>
       </nav>
@@ -117,7 +120,7 @@
     </div>
   </div>
 
-  <section class="section">
+  <section class="section fade-up">
     <div class="container">
       <div class="section-header center">
         <span class="section-label">Premium Features</span>
@@ -159,7 +162,7 @@
     </div>
   </section>
 
-  <section class="section how-bg">
+  <section class="section how-bg fade-up">
     <div class="container">
       <div class="section-header center">
         <span class="section-label">Testimonials</span>
@@ -203,7 +206,65 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Extra sections to reach 8 -->
+  <section class="section fade-up">
+    <div class="container">
+      <div class="farm-banner">
+        <div class="farm-banner-content">
+          <span class="section-label" style="color:var(--primary-light)">Premium Sourcing</span>
+          <h3>Grown with intention.</h3>
+          <p>Every premium order is harvested the same day it ships from our isolated sterile flowering rooms.</p>
+        </div>
+        <img src="../assets/images/hero-farm.png" class="farm-banner-img" alt="Premium Lab">
+      </div>
+    </div>
+  </section>
+
+  <section class="section how-bg fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Master <em>Varieties</em></h2>
+      </div>
+      <div class="varieties-grid">
+        <div class="variety-card"><span class="variety-emoji">🔴</span><div class="variety-name">Antler Reishi</div></div>
+        <div class="variety-card"><span class="variety-emoji">🍄</span><div class="variety-name">Maitake</div></div>
+        <div class="variety-card"><span class="variety-emoji">🌸</span><div class="variety-name">Blue Oyster</div></div>
+        <div class="variety-card"><span class="variety-emoji">🍂</span><div class="variety-name">Chestnut</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Master Plan <em>FAQ</em></h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">How do consultations work?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">You get one hour per month to connect with a mycologist over video call.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Can I buy rare cultures separately?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Master Master growers have exclusive access, but occasional surplus is sold to the public.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">What is included in the Master Plan?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">The Master Plan includes priority shipping, exclusive access to rare varieties, and monthly 1-on-1 consultations with our master mycologists.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Can I upgrade from a Grower plan?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Absolutely. You can upgrade anytime through your account settings and the changes will take effect from your next billing cycle.</div>
+        </div>
+        <div class="dash-card">
+          <div style="font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">Are the consulting sessions remote?</div>
+          <div style="font-family:var(--font-ui);font-size:13px;color:var(--text-muted)">Yes, all consulting sessions are held via high-definition video calls for your convenience.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up">
     <div class="container">
       <div class="cta-banner">
         <h2 class="cta-banner-title">Unlock the Master<br>Experience Today</h2>
@@ -229,10 +290,10 @@
         </a>
         <p class="footer-brand-desc">Artisan mushroom cultivation supplies and farm-fresh weekly boxes. Rooted in the earth, delivered to your table.</p>
         <div class="footer-social">
-          <div class="footer-social-btn">𝕏</div>
-          <div class="footer-social-btn">in</div>
-          <div class="footer-social-btn">ig</div>
-          <div class="footer-social-btn">yt</div>
+          <div class="footer-social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-instagram"></i></div>
+          <div class="footer-social-btn"><i class="fa-brands fa-youtube"></i></div>
         </div>
       </div>
       <div>
@@ -253,11 +314,11 @@
       </div>
       <div>
         <div class="footer-col-title">Company</div>
-        <a href="#" class="footer-link">About Us</a>
-        <a href="#" class="footer-link">Our Farm</a>
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="about.html" class="footer-link">Our Farm</a>
         <a href="pricing.html" class="footer-link">Pricing</a>
-        <a href="#" class="footer-link">Wholesale</a>
-        <a href="#" class="footer-link">Contact</a>
+        <a href="contact.html" class="footer-link">Wholesale</a>
+        <a href="contact.html" class="footer-link">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">
