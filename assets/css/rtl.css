@@ -5,7 +5,10 @@
   text-align: right;
 }
 
-[dir="rtl"] .header-inner {
+[dir="rtl"] .header-inner,
+[dir="rtl"] .logo,
+[dir="rtl"] .auth-logo,
+[dir="rtl"] .dash-logo {
   flex-direction: row-reverse;
 }
 

@@ -9,13 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍄</text></svg>">
 </head>
 <body style="display:flex;min-height:100vh;background:var(--bg-subtle);">
 <!-- Sidebar -->
   <aside class="dash-sidebar">
     <a href="../index.html" class="dash-logo">
-      <div class="logo-icon" style="width:32px;height:32px;font-size:16px">🍄</div>
+      <div class="logo-icon"><i class="fa-solid fa-clover"></i></div>
       Mycelium & Co.
     </a>
     <nav class="dash-nav">
@@ -77,6 +79,9 @@
         <button class="icon-btn" onclick="toggleTheme()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
+        <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
         <button class="icon-btn" style="position:relative" onclick="switchDash('notifications', document.querySelector('[onclick*=notifications]'))">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
           <span style="position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--danger);border:2px solid var(--bg-card)"></span>
@@ -97,7 +102,7 @@
       <div class="dash-section active" id="dash-overview">
         <div class="dash-welcome">
           <div class="dash-welcome-greeting">Good morning</div>
-          <div class="dash-welcome-name">Welcome back, Jane! 🌿</div>
+          <div class="dash-welcome-name">Welcome back, Jane! <i class="fa-solid fa-leaf" style="font-size: 0.8em; color: var(--primary)"></i></div>
           <div class="dash-welcome-sub">Your next delivery arrives Tuesday, April 8th. You're growing beautifully.</div>
         </div>
         <div class="dash-metrics">
@@ -174,28 +179,28 @@
             <div style="display:flex;flex-direction:column;gap:16px">
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🦁 Lion's Mane Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)"><i class="fa-solid fa-clover" style="margin-right:4px"></i> Lion's Mane Kit</span>
                   <span style="font-family:var(--font-ui);font-size:12px;color:var(--primary)">Flush 2 • Day 5</span>
                 </div>
                 <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
               </div>
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🌸 Pink Oyster Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)"><i class="fa-solid fa-leaf" style="margin-right:4px"></i> Pink Oyster Kit</span>
                   <span style="font-family:var(--font-ui);font-size:12px;color:var(--warning)">Flush 1 • Day 9</span>
                 </div>
                 <div class="progress-bar"><div class="progress-fill" style="width:90%;background:var(--gold)"></div></div>
               </div>
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🔴 Reishi Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)"><i class="fa-solid fa-clover" style="margin-right:4px"></i> Reishi Kit</span>
                   <span style="font-family:var(--font-ui);font-size:12px;color:var(--text-light)">Colonising • Day 14</span>
                 </div>
                 <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
               </div>
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)">🍂 Shiitake Kit</span>
+                  <span style="font-family:var(--font-ui);font-size:13px;color:var(--text)"><i class="fa-solid fa-leaf" style="margin-right:4px"></i> Shiitake Kit</span>
                   <span style="font-family:var(--font-ui);font-size:12px;color:var(--success)">Ready to harvest!</span>
                 </div>
                 <div class="progress-bar"><div class="progress-fill" style="width:100%;background:var(--success)"></div></div>
@@ -210,19 +215,19 @@
           </div>
           <div class="guides-grid">
             <div class="guide-card">
-              <div class="guide-thumb"><div class="guide-play">▶</div>🌱</div>
+              <div class="guide-thumb"><div class="guide-play">▶</div><i class="fa-solid fa-seedling"></i></div>
               <div class="guide-body"><div class="guide-tag">Beginner</div><div class="guide-title">First Flush: What to Expect</div><div class="guide-meta">8 min read</div></div>
             </div>
             <div class="guide-card">
-              <div class="guide-thumb guide-thumb-2"><div class="guide-play">▶</div>💧</div>
+              <div class="guide-thumb guide-thumb-2"><div class="guide-play">▶</div><i class="fa-solid fa-droplet"></i></div>
               <div class="guide-body"><div class="guide-tag">Care</div><div class="guide-title">Humidity & Moisture Management</div><div class="guide-meta">12 min read</div></div>
             </div>
             <div class="guide-card">
-              <div class="guide-thumb guide-thumb-3"><div class="guide-play">▶</div>🔬</div>
+              <div class="guide-thumb guide-thumb-3"><div class="guide-play">▶</div><i class="fa-solid fa-microscope"></i></div>
               <div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Identifying Contamination Early</div><div class="guide-meta">15 min read</div></div>
             </div>
             <div class="guide-card">
-              <div class="guide-thumb guide-thumb-4"><div class="guide-play">▶</div>🍳</div>
+              <div class="guide-thumb guide-thumb-4"><div class="guide-play">▶</div><i class="fa-solid fa-utensils"></i></div>
               <div class="guide-body"><div class="guide-tag">Cooking</div><div class="guide-title">The Perfect Mushroom Sauté</div><div class="guide-meta">6 min read</div></div>
             </div>
           </div>
@@ -278,42 +283,42 @@
           </div>
           <div class="variety-prefs">
             <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🦁</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-clover"></i></span>
               <span class="variety-pref-name">Lion's Mane</span>
               <div class="variety-pref-check">✓</div>
             </div>
             <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🌸</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-leaf"></i></span>
               <span class="variety-pref-name">Pink Oyster</span>
               <div class="variety-pref-check">✓</div>
             </div>
             <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🍂</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-leaf"></i></span>
               <span class="variety-pref-name">Shiitake</span>
               <div class="variety-pref-check">✓</div>
             </div>
             <div class="variety-pref-item" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🔴</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-clover"></i></span>
               <span class="variety-pref-name">Reishi</span>
               <div class="variety-pref-check"></div>
             </div>
             <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🟡</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-clover" style="color:var(--gold)"></i></span>
               <span class="variety-pref-name">Chanterelle</span>
               <div class="variety-pref-check">✓</div>
             </div>
             <div class="variety-pref-item selected" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🍄</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-clover"></i></span>
               <span class="variety-pref-name">King Oyster</span>
               <div class="variety-pref-check">✓</div>
             </div>
             <div class="variety-pref-item" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🌿</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-leaf"></i></span>
               <span class="variety-pref-name">Maitake</span>
               <div class="variety-pref-check"></div>
             </div>
             <div class="variety-pref-item" onclick="this.classList.toggle('selected')">
-              <span class="variety-pref-emoji">🌾</span>
+              <span class="variety-pref-emoji"><i class="fa-solid fa-leaf"></i></span>
               <span class="variety-pref-name">Enoki</span>
               <div class="variety-pref-check"></div>
             </div>
@@ -338,10 +343,10 @@
           <div class="guide-card"><div class="guide-thumb guide-thumb-2"><div class="guide-play">▶</div>💧</div><div class="guide-body"><div class="guide-tag">Care</div><div class="guide-title">Humidity & Moisture Management</div><div class="guide-meta">12 min read</div></div></div>
           <div class="guide-card"><div class="guide-thumb guide-thumb-3"><div class="guide-play">▶</div>🔬</div><div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Identifying Contamination Early</div><div class="guide-meta">15 min read</div></div></div>
           <div class="guide-card"><div class="guide-thumb guide-thumb-4"><div class="guide-play">▶</div>🍳</div><div class="guide-body"><div class="guide-tag">Cooking</div><div class="guide-title">The Perfect Mushroom Sauté</div><div class="guide-meta">6 min read</div></div></div>
-          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#705040,#403020)"><div class="guide-play">▶</div>🫙</div><div class="guide-body"><div class="guide-tag">Intermediate</div><div class="guide-title">Making Your First Grain Spawn</div><div class="guide-meta">22 min read</div></div></div>
-          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#405050,#202830)"><div class="guide-play">▶</div>🧬</div><div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Agar Work for Isolation</div><div class="guide-meta">30 min read</div></div></div>
-          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#506040,#283220)"><div class="guide-play">▶</div>🌲</div><div class="guide-body"><div class="guide-tag">Foraging</div><div class="guide-title">Wild Foraging Safety Basics</div><div class="guide-meta">18 min read</div></div></div>
-          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#705030,#402010)"><div class="guide-play">▶</div>💊</div><div class="guide-body"><div class="guide-tag">Medicinal</div><div class="guide-title">Functional Mushrooms: A Guide</div><div class="guide-meta">25 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#705040,#403020)"><div class="guide-play">▶</div><i class="fa-solid fa-jar"></i></div><div class="guide-body"><div class="guide-tag">Intermediate</div><div class="guide-title">Making Your First Grain Spawn</div><div class="guide-meta">22 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#405050,#202830)"><div class="guide-play">▶</div><i class="fa-solid fa-dna"></i></div><div class="guide-body"><div class="guide-tag">Advanced</div><div class="guide-title">Agar Work for Isolation</div><div class="guide-meta">30 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#506040,#283220)"><div class="guide-play">▶</div><i class="fa-solid fa-tree"></i></div><div class="guide-body"><div class="guide-tag">Foraging</div><div class="guide-title">Wild Foraging Safety Basics</div><div class="guide-meta">18 min read</div></div></div>
+          <div class="guide-card"><div class="guide-thumb" style="background:linear-gradient(135deg,#705030,#402010)"><div class="guide-play">▶</div><i class="fa-solid fa-capsules"></i></div><div class="guide-body"><div class="guide-tag">Medicinal</div><div class="guide-title">Functional Mushrooms: A Guide</div><div class="guide-meta">25 min read</div></div></div>
         </div>
       </div>
 
@@ -351,15 +356,15 @@
         <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Step-by-step video walkthroughs from our master mycologists.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
           <div class="guide-card" style="border-radius:var(--radius)">
-            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#3A6B40,#2C5230)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div>🌱</div>
+            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#3A6B40,#2C5230)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div><i class="fa-solid fa-seedling"></i></div>
             <div class="guide-body"><div class="guide-tag">Series 1 · Ep. 1</div><div class="guide-title">Complete Beginner's Cultivation Course — Introduction</div><div class="guide-meta">28 min · HD</div></div>
           </div>
           <div class="guide-card" style="border-radius:var(--radius)">
-            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#9B5C28,#7A4520)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div>⚗️</div>
+            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#9B5C28,#7A4520)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div><i class="fa-solid fa-microscope"></i></div>
             <div class="guide-body"><div class="guide-tag">Series 1 · Ep. 2</div><div class="guide-title">Sterilisation Techniques: Pressure Cooker Guide</div><div class="guide-meta">45 min · HD</div></div>
           </div>
           <div class="guide-card" style="border-radius:var(--radius)">
-            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#404030,#202018)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div>🧫</div>
+            <div class="guide-thumb" style="aspect-ratio:16/9;font-size:50px;background:linear-gradient(135deg,#404030,#202018)"><div class="guide-play" style="width:48px;height:48px;font-size:18px">▶</div><i class="fa-solid fa-flask"></i></div>
             <div class="guide-body"><div class="guide-tag">Series 2 · Ep. 1</div><div class="guide-title">Agar Masterclass: From Plates to Cultures</div><div class="guide-meta">52 min · HD</div></div>
           </div>
         </div>
@@ -371,7 +376,7 @@
         <p style="font-family:var(--font-ui);font-size:14px;color:var(--text-muted);margin-bottom:24px">Stay updated on your deliveries, grow progress, and new content.</p>
         <div class="notif-list">
           <div class="notif-item unread">
-            <div class="notif-icon">📦</div>
+            <div class="notif-icon"><i class="fa-solid fa-box"></i></div>
             <div style="flex:1">
               <div class="notif-title">Box #24 is being prepared</div>
               <div class="notif-sub">Pink Oyster, Reishi & King Oyster are being packed for your Apr 1 delivery.</div>
@@ -379,7 +384,7 @@
             <div class="notif-time">2h ago</div>
           </div>
           <div class="notif-item unread">
-            <div class="notif-icon">🍄</div>
+            <div class="notif-icon"><i class="fa-solid fa-clover"></i></div>
             <div style="flex:1">
               <div class="notif-title">Your Shiitake kit is ready to harvest!</div>
               <div class="notif-sub">The fruiting bodies have reached optimal size. Harvest now for best flavour.</div>
@@ -387,7 +392,7 @@
             <div class="notif-time">5h ago</div>
           </div>
           <div class="notif-item unread">
-            <div class="notif-icon">📚</div>
+            <div class="notif-icon"><i class="fa-solid fa-book"></i></div>
             <div style="flex:1">
               <div class="notif-title">New guide: Agar Work for Isolation</div>
               <div class="notif-sub">A new advanced growing guide has been added to your library.</div>
@@ -395,7 +400,7 @@
             <div class="notif-time">1d ago</div>
           </div>
           <div class="notif-item unread">
-            <div class="notif-icon">🎉</div>
+            <div class="notif-icon"><i class="fa-solid fa-award"></i></div>
             <div style="flex:1">
               <div class="notif-title">You've completed 7 growing guides!</div>
               <div class="notif-sub">Fantastic progress. You've unlocked the Intermediate Grower badge.</div>
@@ -403,7 +408,7 @@
             <div class="notif-time">2d ago</div>
           </div>
           <div class="notif-item">
-            <div class="notif-icon">🚚</div>
+            <div class="notif-icon"><i class="fa-solid fa-truck"></i></div>
             <div style="flex:1">
               <div class="notif-title">Box #23 delivered successfully</div>
               <div class="notif-sub">Your delivery was confirmed on Mar 25. Enjoy your Lion's Mane!</div>

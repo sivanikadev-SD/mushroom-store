@@ -19,8 +19,20 @@ function initTheme() {
   }
 }
 
+function initRTL() {
+  const savedRTL = localStorage.getItem('mycelium_rtl');
+  if (savedRTL === 'true') {
+    document.documentElement.dir = 'rtl';
+    document.documentElement.classList.add('rtl-mode');
+  } else {
+    document.documentElement.dir = 'ltr';
+    document.documentElement.classList.remove('rtl-mode');
+  }
+}
+
 // Call on startup
 initTheme();
+initRTL();
 
 function toggleTheme() {
   const html = document.documentElement;
@@ -43,7 +55,16 @@ function toggleTheme() {
 // =====================
 function toggleRTL() {
   const html = document.documentElement;
-  html.dir = html.dir === 'rtl' ? 'ltr' : 'rtl';
+  const isRTL = html.dir === 'rtl';
+  const newRTL = !isRTL;
+  
+  html.dir = newRTL ? 'rtl' : 'ltr';
+  if (newRTL) {
+    html.classList.add('rtl-mode');
+  } else {
+    html.classList.remove('rtl-mode');
+  }
+  localStorage.setItem('mycelium_rtl', newRTL);
 }
 
 // =====================
