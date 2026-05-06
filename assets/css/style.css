@@ -287,6 +287,10 @@ ul {
   cursor: pointer;
 }
 
+.nav-link svg {
+  transition: transform var(--transition);
+}
+
 .nav-link:hover,
 .nav-link.active {
   color: var(--primary);
@@ -3110,6 +3114,10 @@ ul {
     visibility: visible;
     pointer-events: auto;
     transform: none;
+  }
+  
+  .nav-dropdown.active .nav-link svg {
+    transform: rotate(180deg);
   }
   
   .nav-dropdown:hover .dropdown-menu,

@@ -142,6 +142,33 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.animationPlayState = 'paused';
     fadeObserver.observe(el);
   });
+
+  // Mobile Dropdown Toggle Fix
+  const dropdownLinks = document.querySelectorAll('.nav-dropdown > .nav-link');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1080) {
+        // Find if this is a top-level dropdown link that should toggle a menu
+        const parent = link.parentElement;
+        const menu = parent.querySelector('.dropdown-menu');
+        
+        if (menu) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isActive = parent.classList.contains('active');
+          
+          // Close all other dropdowns
+          document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
+          
+          // Toggle current
+          if (!isActive) {
+            parent.classList.add('active');
+          }
+        }
+      }
+    });
+  });
 });
 
 // =====================
